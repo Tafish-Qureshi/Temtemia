@@ -30,12 +30,12 @@ p {
     text-align: center;
 }
 
+/* Desktop first: dit staat al in je gewone CSS */
 nav {
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 12px 24px;
-
     background: rgba(14, 20, 56, 0.65);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -48,18 +48,31 @@ nav a {
     color: #e6ebff;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-nav a:hover {
-    color: #f7c948;
-    transform: translateY(-2px);
 }
 
 nav img {
-    max-width: 75px;
+    max-width: 40px;
     height: auto;
 }
+
+/* Mobile / tablet breakpoint */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* logo boven de links */
+        gap: 8px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+
+    nav img {
+        max-width: 35px;
+    }
+}
+
 
 .hero {
     min-height: 80vh;
@@ -124,3 +137,4 @@ footer p {
     text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
 }
+
