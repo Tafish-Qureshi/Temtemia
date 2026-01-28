@@ -16,6 +16,21 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    font-size: 45px;
+    margin-bottom: 16px;
+    text-align: center;
+    margin: 12px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px;
+    text-align: center;
+}
+
+
 img {
     max-width: 125px;
     height: auto;
@@ -32,10 +47,11 @@ nav {
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     overflow: hidden;
+    font-size: 18px;
 }
 
 nav a {
-    color: #8d0000;
+    color: #ffffff;
     text-decoration: none;
     margin-left: 24px;
     font-weight: 500;
@@ -44,4 +60,16 @@ nav a {
 
 nav a:hover {
     color: #ff4c4c;
+}
+
+section.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(25vh); /* Adjust height considering nav height */
+}
+
+section.hero img {
+    max-width: 300px;
+    height: auto;
 }
