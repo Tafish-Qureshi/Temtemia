@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(
+        circle at top,
+        #3b2a6f 0%,
+        #1b235a 40%,
+        #0e1438 100%
+    );
+    color: #ffffff;
+}
+
+/* Logo */
+img {
+    width: 100px;
+    height: auto;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 24px;
+
+    background: rgba(27, 35, 90, 0.6);
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Nav links (optioneel) */
+nav a {
+    color: #e6ebff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #f7c948;
+    transform: translateY(-1px);
+}
