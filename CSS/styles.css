@@ -51,10 +51,14 @@ nav a {
 }
 
 nav img {
-    max-width: 40px;
+    max-width: 125px;
     height: auto;
 }
 
+nav a:hover {
+    text-decoration: none;
+    color: #f7c948;
+}
 /* Mobile / tablet breakpoint */
 @media screen and (max-width: 768px) {
     nav {
