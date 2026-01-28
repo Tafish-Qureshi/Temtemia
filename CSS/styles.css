@@ -30,13 +30,6 @@ p {
     text-align: center;
 }
 
-
-img {
-    max-width: 125px;
-    height: auto;
-    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.35));
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -62,14 +55,66 @@ nav a:hover {
     color: #ff4c4c;
 }
 
-section.hero {
+.hero {
+    min-height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(25vh); /* Adjust height considering nav height */
+
+    background:
+      linear-gradient(
+        rgba(14, 20, 56, 0.65),
+        rgba(14, 20, 56, 0.85)
+      ),
+      url("temtemia-background.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 
-section.hero img {
-    max-width: 300px;
-    height: auto;
+.hero h1 {
+    font-size: 3rem;
+    color: #f7c948;
+    margin-top: 16px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #e6ebff;
+}
+
+footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 14px;
+    background: rgba(14, 20, 56, 0.55);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #cccccc;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+}
+
+.features a {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
