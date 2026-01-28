@@ -74,22 +74,11 @@ nav img {
 }
 
 
-.hero {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    background:
-      linear-gradient(
-        rgba(14, 20, 56, 0.65),
-        rgba(14, 20, 56, 0.85)
-      ),
-      url("temtemia-background.png");
-    background-size: cover;
-    background-position: center;
-    text-align: center;
+.hero img {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 50px auto;
 }
 
 .hero h1 {
