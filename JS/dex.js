@@ -1,5 +1,6 @@
 const container = document.getElementById('temtem-container');
 
+
 // Functie om type badges kleur te geven
 function getTypeColor(type) {
     const colors = {
@@ -21,37 +22,37 @@ function getTypeColor(type) {
 
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('temtem-container');
-
+    
     fetch("https://temtem-api.mael.tech/api/temtems")
-      .then(res => res.json())
-      .then(data => {
+    .then(res => res.json())
+    .then(data => {
         data.forEach(temtem => {
             const card = document.createElement('div');
             card.classList.add('temtem-card');
-
+            
             // Type badges
             const typeBadges = (temtem.types || []).map(t => `<span class="type-badge" style="background:${getTypeColor(t)}">${t}</span>`).join(' ');
-
+            
             // Evolutions
             const evolutions = (temtem.evolutions && temtem.evolutions.length > 0) ? temtem.evolutions.join(' → ') : 'None';
-
+            
             // Moves
             const moves = (temtem.moves && temtem.moves.length > 0) ? temtem.moves.join(', ') : 'None';
-
+            
             // Afbeelding (veilig checken)
-            const imgSrc = temtem.wikiRender || "https://via.placeholder.com/120x120?text=No+Image";
-
+            const imgSrc = `https://wsrv.nl/?url=${encodeURIComponent(temtem.portraitWikiUrl)}`;
+            
             card.innerHTML = `
-                <img src="${imgSrc}" alt="${temtem.name}" class="temtem-img">
-                <h2>${temtem.name}</h2>
-                <p><strong>Number:</strong> ${temtem.number}</p>
-                <p class="types"><strong>Types:</strong> ${typeBadges}</p>
-                <p><strong>Evolutions:</strong> ${evolutions}</p>
-                <p><strong>Moves:</strong> ${moves}</p>
+            <img src="${imgSrc}" alt="${temtem.name}" class="temtem-img">
+            <h2>${temtem.name}</h2>
+            <p><strong>Number:</strong> ${temtem.number}</p>
+            <p class="types"><strong>Types:</strong> ${typeBadges}</p>
+            <p><strong>Evolutions:</strong> ${evolutions}</p>
+            <p><strong>Moves:</strong> ${moves}</p>
             `;
-
+            
             container.appendChild(card);
         });
-      })
-      .catch(err => console.error("Error fetching Temtem data:", err));
+    })
+    .catch(err => console.error("Error fetching Temtem data:", err));
 });
