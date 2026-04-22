@@ -47,8 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>${temtem.name}</h2>
             <p><strong>Number:</strong> ${temtem.number}</p>
             <p class="types"><strong>Types:</strong> ${typeBadges}</p>
-            <p><strong>Evolutions:</strong> ${evolutions}</p>
-            <p><strong>Moves:</strong> ${moves}</p>
             `;
             
             container.appendChild(card);
