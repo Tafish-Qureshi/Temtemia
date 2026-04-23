@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="/CSS/teambuilder.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/Pages/teambuilder.html">Team Builder</a></li>
+            <li><a href="/Pages/temtem.html">Temtem List</a></li>
+        </ul>
+    </nav>
+    
     <div class="container" id="team-builder">
-        <h1>Temtem Team Builder</h1>
-        <form>
-            <label for="temtem">Enter a Temtem:</label>
-            <input type="text" id="temtem" name="temtem">
-            <button type="submit">Submit</button>
+        <form action="search">
+            <input type="text" id="search-input" name="query" placeholder="Search Temtem...">
+            <button type="submit">Search</button>
         </form>
+        <!-- Team builder form  dynamically generated -->
     </div>
 </body>
 </html>
