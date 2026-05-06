@@ -7,7 +7,8 @@ Dit is een project waarmee ik bezig ben van een spel waar ik eigenlijk een soort
 als je deze project via https://github.com/Tafish-Qureshi/Temtemia wilt clonen dan is het volgende wat je kunt doen 
 
 Stap 1:  De blauwe knop genaamd code
-Als je bij de repository erbij bent moet op de blauwe knop met code erop klikken dan krijg je het volgende te zien:
+Als je bij de repository erbij bent moet op de blauwe knop met code erop klikken,dan krijg je het volgende te zien:
+dan heb je de HTTPS versie nodig
 ```
 https://github.com/Tafish-Qureshi/Temtemia.git
 ```
